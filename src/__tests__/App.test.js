@@ -14,7 +14,14 @@ test("renders the correct child components", () => {
     Uncomment the line below to see the DOM elements being returned
     by the App component in your terminal when you run the tests
   */
-  // screen.debug();
+  screen.debug();
+
+  
+  // Check for "Whoa!" from ExampleComponent
+  expect(screen.getByText("Whoa!")).toBeInTheDocument();
+
+  // Check for iframe with title "time video" from TestComponent
+  expect(screen.getByTitle("time video")).toBeInTheDocument();
 
   expect(container.querySelector("nav")).toBeInTheDocument();
   expect(container.querySelector("#home")).toBeInTheDocument();

@@ -16,15 +16,38 @@ function Home() {
   );
 }
 
-{/* write an <About> component here */}
+function About() {
+  return (
+    <div id="about">
+      <h1>About</h1>
+    </div>
+  );
+}
 
-
+function ExampleComponent() {
+  return <div>Whoa!</div>;
+}
+function TestComponent() {
+  return (
+    <iframe
+      title="time video"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/5TbUxGZtwGI"
+      frameBorder="0"
+      allow="autoplay; encrypted-media"
+      allowFullScreen
+    ></iframe>
+  );
+}
 function App() {
   return (
     <div>
       <NavBar />
-      {/* add the <Home> component here */}
-      {/* add your <About> component here */}
+      {<ExampleComponent />}
+      {<TestComponent />}
+      {<Home />}
+      {<About />}
     </div>
   );
 }
